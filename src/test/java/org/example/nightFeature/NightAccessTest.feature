@@ -1,10 +1,9 @@
 #language:en
-Feature: GET check Access control service OUT of working day test (Night test)
+Feature: GET check Access control service OUT of working day test Night test
 
 #      Background: (checked by @BeforeAll function)
 #    Given Access control service is available
 #    Given it's NOT working time
-
 
 # Users can't enter rooms if time OUT of working day
 # Positive test with table

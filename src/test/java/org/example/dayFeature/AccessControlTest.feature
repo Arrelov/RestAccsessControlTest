@@ -18,7 +18,7 @@ Feature: GET check test Access control service working day test
   Scenario Outline: GET check entrance and exit for all users by table
     When I send request mode "<mode>" for keyId <keyId> roomId <roomId>
     Then Access control service response <response>
-    Examples:
+      Examples:
       | mode      | keyId | roomId  | response  |
       | ENTRANCE  | 1     | 1       | 200       |
       | EXIT      | 1     | 1       | 200       |
@@ -35,7 +35,7 @@ Feature: GET check test Access control service working day test
   Scenario Outline: GET check entrance and exit for all users by table
     When I send request mode "<mode>" for keyId <keyId> roomId <roomId>
     Then Access control service response <response>
-    Examples:
+      Examples:
       | mode      | keyId | roomId  | response  |
       | ENTRANCE  | 1     | 2       | 403       |
       | ENTRANCE  | 1     | 3       | 403       |

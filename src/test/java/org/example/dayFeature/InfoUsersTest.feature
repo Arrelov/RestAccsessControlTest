@@ -4,7 +4,7 @@ Feature: GET info users test Access control service
   #let's start with smoke test
   Scenario: Run request get/info/users and get response 200
     When I run get info users request and get response 200
-    #Then I get response 200 (checked by REST assurance function)
+#   Then I get response 200 (checked by REST assurance function)
 
   Scenario Outline: GET check users page start to end by table
     When I send request start <start> to end <end> and get response 200
@@ -23,4 +23,6 @@ Feature: GET info users test Access control service
 
   Scenario: Check info users by one keyId and one room
     When User keyId 8 enters roomId 4
+#   Then I get response 200 (checked by REST assurance function)
+
 

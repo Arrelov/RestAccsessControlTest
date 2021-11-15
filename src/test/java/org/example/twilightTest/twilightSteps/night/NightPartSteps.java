@@ -1,4 +1,4 @@
-package org.example.nightSteps;
+package org.example.twilightTest.twilightSteps.night;
 
 import io.cucumber.java.BeforeAll;
 import io.cucumber.java.en.Then;
@@ -9,7 +9,7 @@ import org.example.metods.getCheck.CheckReturnStatusCode;
 import org.example.metods.getInfoRooms.ServiceAvailable;
 import org.junit.Assert;
 
-public class NightSteps {
+public class NightPartSteps {
 
     @BeforeAll
     public static void serviceIsAvailable(){

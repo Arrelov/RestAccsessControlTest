@@ -1,4 +1,4 @@
-package org.example.nightSteps;
+package org.example.twilightTest.twilightSteps.day;
 
 import io.cucumber.java.BeforeAll;
 import io.cucumber.java.en.Then;
@@ -6,17 +6,24 @@ import io.cucumber.java.en.When;
 import org.example.entity.Mode;
 import org.example.metods.NightTimeCheck;
 import org.example.metods.getCheck.CheckReturnStatusCode;
+import org.example.metods.getCheck.CheckWithStatusCode;
+import org.example.metods.getInfoRooms.GetInfoRooms;
+import org.example.metods.getInfoRooms.JsonCompareMakerRoom1;
 import org.example.metods.getInfoRooms.ServiceAvailable;
 import org.junit.Assert;
 
-public class NightSteps {
+import static org.example.entity.Mode.ENTRANCE;
+import static org.example.entity.Mode.EXIT;
+
+
+public class DayPartSteps {
 
     @BeforeAll
     public static void serviceIsAvailable(){
         ServiceAvailable serv = new ServiceAvailable();
-        serv.serviceAvailable();                         // ignore test if service offline
+        serv.serviceAvailable();                        // ignore test if service offline
         NightTimeCheck night = new NightTimeCheck();
-        Assert.assertTrue(night.nightTime());            // ignore test if working time
+        Assert.assertFalse(night.nightTime());          // ignore test if night
     }
 
     int requestStatusCode;
@@ -30,4 +37,5 @@ public class NightSteps {
     public void access_control_service_response(int statusCode) {
         Assert.assertEquals(statusCode, requestStatusCode);
     }
+
 }
